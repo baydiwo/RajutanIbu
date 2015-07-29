@@ -1,0 +1,136 @@
+@import "build/lesshat.less";
+@import url(http://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+
+@sans: 'PT Sans', sans-serif;
+@glo: 'Gloria Hallelujah', cursive;
+
+@imp : !important;
+@pink : #f9277b;
+@purple : #864886;
+@black : #111111;
+@grey : #a3a0a1;
+@tshadow : 0px 2px 3px rgba(0, 0, 0, 0.8);
+
+body {font-family: @sans;}
+.entry-header {border:none @imp;margin-bottom: 20px @imp;
+    h1.entry-title {font-size: 40px;font-family: @glo; color: @pink; font-weight: bold; text-decoration: none; border:none @imp;}
+}
+
+
+.tagline {font-size: 65px; font-family: @glo; color: @purple; text-shadow:0px 0px 0px; position: absolute; left: 0; top: 0;text-shadow: @tshadow;width: 100%; text-align: center;top: 240px;display: none;}
+
+.site-header {
+    background: url(images/banner.jpg) no-repeat top center; width: 100%; position: relative;  padding-bottom: 30px; border-bottom: 1px solid @purple;box-sizing: content-box;
+    height:145px;
+    background-position: 0 -280px;
+    &.homepage {
+        height: 766px;
+        background-position: 0 0;
+    }
+}
+.site-branding { width:418px @imp; height: 130px; float: none @imp; position: relative;left: 50%;top: -80px; margin-left: -209px;
+    &.homepage{ margin-bottom: 519px @imp;}
+    img {width: 100%;}
+}
+#searchform {
+    input {background: rgba(255,255,255,0); border:1px solid @pink; color: @pink;}
+}
+.main-navigation ul li a, .site-title a, ul.menu li a, .site-branding h1 a {color: @pink; font-size: 18px;
+    &:hover {color: @purple;}
+}
+.woocommerce-active .site-header .site-header-cart {width: 240px;}
+.site-header .widget_shopping_cart li, .site-header .widget_shopping_cart p.buttons, .site-header .widget_shopping_cart p.total {background: @purple @imp;}
+.site-header-cart .widget_shopping_cart, .site-header .product_list_widget li .quantity {color: #fff; font-family: @sans;}
+.woocommerce-active .site-header .site-header-cart {float: left @imp;}
+.storefront-product-section.storefront-product-categories {width: 100%; float: left;margin-top:-550px;background: none;margin-bottom: 0;
+    &.homepage {margin-top: -350px;}
+    h2.section-title {font-size: 36px; color: @pink; text-decoration: underline;font-family: @glo;text-shadow:@tshadow;text-align: center @imp;}
+    ul.products {width: 100%; float: left;
+        li {display: inline-block @imp; margin-right: 40px;float: left @imp;width: auto;}
+    }
+    img {display: none @imp;}
+    h3 , mark {font-size: 22px; color: @pink; font-weight: bold;font-family: @glo;text-decoration: underline; text-shadow: @tshadow; &:hover {color: @purple;} }mark {color: @black;}
+}
+.main-navigation {position: relative; z-index: 999;width: 100% @imp;margin-right: 0 @imp;padding-top: 0 @imp;
+    ul.nav-menu {
+        li a {color: @purple; font-family: @sans; font-size: 22px; font-weight: normal;padding: 0 20px @imp;}
+    }
+    .menu-wrapper{
+        max-width: 65.141em;
+        width: 100%;
+        height: 50px;
+        position: relative;
+        margin: 0 auto;
+        .logo > img {
+            float: left;
+            transform: translateY(-40px);
+            vertical-align: middle;
+            width: 0px;
+
+        }
+    }
+    &.stuckMenu {.transition(ease .5s all);}
+    &.isStuck {
+        left: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.97); //rgba(56,61,143,0.97);
+        border-bottom: 1px solid @purple;
+        .logo > img {
+            display: block @imp;
+            width: 70px;
+            .transition(ease .5s all);
+            transform: translateY(7px);
+        }
+        .menu {
+            float: left;
+            margin-left: 20px;
+            a {
+                color: @pink @imp;
+                padding: 6px 20px @imp;
+                text-shadow:0px 0px 1px #000;
+            }
+        }
+
+    }
+
+}
+.hentry, .storefront-product-section {background: url(images/separator.png) no-repeat left bottom; border:none @imp;}.storefront-product-section {padding-bottom: 90px;}
+.storefront-product-section {
+    h2 {font: bold 36px/1em  @glo;color: @pink; text-align: left @imp;}
+}
+ul.products li.product img {border:2px solid @pink;}
+.product.type-product.status-publish.has-post-thumbnail{
+    overflow: visible;
+}
+.product-thumbs {
+    img {margin-bottom: 10px @imp;}
+    h3 {font-size: 18px; font-family: @sans;color: @purple; text-align: center;}
+    .price {width: 126px; height: 49px; background: url(images/tag-price.png) no-repeat;font-size: 16px;
+        position: absolute;
+        left: -10px;top: 90px;
+        .amount {color: #fff;line-height: 3.4em;text-align: right;}
+        }
+}
+// button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart, .widget-area .widget a.button, .site-header-cart .widget_shopping_cart a.button {width: 95px @imp; height: 38px @imp;
+//     background: url(images/btn-buy.png) no-repeat center center;color: rgba(255,255,255,0);border-radius: 0;box-shadow: none;line-height: none;float: right;
+//     &:hover {color: rgba(255,255,255,0); background: url(images/btn-buy-hover.png);}
+// }
+
+#payment .place-order .button {background: @purple;}
+
+button.alt, input.alt[type="button"], input.alt[type="reset"], input.alt[type="submit"], .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart {background-color: @pink;}
+
+button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart, .widget-area .widget a.button, .site-header-cart .widget_shopping_cart a.button {background-color: @purple;trasition:all 1s ease;}
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover, .widget-area .widget a.button:hover, .site-header-cart .widget_shopping_cart a.button:hover {background-color: darken(@purple , 15%);border-color: darken(@purple , 15%)}
+.single-product div.product .images .thumbnails a.zoom {
+    width: 24%;margin-right: 1%;
+    &.last {float: left @imp;margin-right: 0px @imp;}
+}
+
+.widget h1 {border-bottom-color: @purple;}
+
+.quantity .minus, .quantity .plus {color: #fff;}
+
+.woocommerce-info, .woocommerce-noreviews, p.no-comments {background-color: @pink;}
+#order_review_heading, #order_review {border-color: @purple;}
